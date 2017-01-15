@@ -289,12 +289,10 @@ h3 {
 	}
 }
 .panel {
-	position: absolute;
-	top: 0;
-	left: 100%;
+	display: none;
 }
 .panel.active {
-	position: static;
+	display: block;
 }
 .tab.active {
     border-bottom: 4px solid $primary;
