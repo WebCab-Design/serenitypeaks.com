@@ -304,10 +304,6 @@ h3 {
     cursor: pointer;
 }
 
-.tabs > div:nth-child(1) {
-    border-left: 3px solid #cacaca;
-}
-
 .tabs > div:hover {
     background: #dddddd;
 }
