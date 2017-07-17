@@ -1,19 +1,25 @@
 {
-  "name": "womens.peaksrecovery.com",
+  "name": "serenity-peaks",
   "version": "1.0.0",
-  "description": "womens.peaksrecovery.com",
+  "description": "serenity-peaks",
   "main": "index.js",
   "scripts": {
-    "build": "rm -r dist/* && rm -r docs/* && muleify pack src dist && muleify pack src docs"
+    "serve": "muleify serve -w src dist",
+    "build": "rm -r docs/* && muleify pack src docs",
+    "cp": "cp node_modules/jenie/dist/jenie.polly.min.js src/assets/js/."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebCab-Design/womens.peaksrecovery.com.git"
+    "url": "git+https://github.com/WebCab-Design/peaks-recovery.git"
   },
-  "author": "",
+  "author": "WebCab",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/WebCab-Design/womens.peaksrecovery.com/issues"
+    "url": "https://github.com/WebCab-Design/peaks-recovery/issues"
   },
-  "homepage": "https://github.com/WebCab-Design/womens.peaksrecovery.com#readme"
+  "homepage": "https://github.com/WebCab-Design/peaks-recovery#readme",
+  "dependencies": {
+    "astatine": "^1.2.0",
+    "flexboxgrid": "^6.3.1"
+  }
 }
