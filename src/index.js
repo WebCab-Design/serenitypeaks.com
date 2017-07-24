@@ -25,30 +25,6 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	var tprcOfficeGallery = document.querySelector('.tprc-office-gallery');
-	if (tprcOfficeGallery) {
-		Astatine.ajax({
-			method: 'get',
-			action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/tprc-office.json',
-			success: function (xhr) {
-				var list = JSON.parse(xhr.response);
-				var largeImages = [];
-				var smallImages = [];
-
-				for (var i = 0, l = list.resources.length; i < l; i++) {
-					var item = list.resources[i];
-					largeImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/w_900/' + item.public_id + '.' + item.format);
-					smallImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/w_150/' + item.public_id + '.' + item.format);
-				}
-
-				erbium.gallery.create('.tprc-office-gallery', largeImages, smallImages);
-			},
-			error: function (xhr) {
-				console.log(xhr);
-			}
-		});
-	}
-
 	var sprcOfficeGallery = document.querySelector('.sprc-office-gallery');
 	if (sprcOfficeGallery) {
 		Astatine.ajax({
