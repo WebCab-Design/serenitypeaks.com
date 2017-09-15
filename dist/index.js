@@ -48,11 +48,11 @@ window.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	var residentialHousingGallery = document.querySelector('.residential-housing-gallery');
+	var residentialHousingGallery = document.querySelector('.womens-home-gallery');
 	if (residentialHousingGallery) {
 		Astatine.ajax({
 			method: 'get',
-			action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/residential-housing-gallery.json',
+			action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/womens-home.json',
 			success: function (xhr) {
 				var list = JSON.parse(xhr.response);
 				var largeImages = [];
@@ -60,10 +60,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
 				for (var i = 0, l = list.resources.length; i < l; i++) {
 					var item = list.resources[i];
-					largeImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/w_900/' + item.public_id + '.' + item.format);
-					smallImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/w_150/' + item.public_id + '.' + item.format);
+					largeImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/f_auto,w_900/' + item.public_id + '.' + item.format);
+					smallImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/f_auto,w_150/' + item.public_id + '.' + item.format);
 				}
-				erbium.gallery.create('.residential-housing-gallery', largeImages, smallImages);
+				erbium.gallery.create('.womens-home-gallery', largeImages, smallImages);
 			},
 			error: function (xhr) {
 				console.log(xhr);
