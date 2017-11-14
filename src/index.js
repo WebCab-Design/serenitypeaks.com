@@ -1,4 +1,3 @@
-window.addEventListener('DOMContentLoaded', function () {
 
 	var form = document.querySelector('.form');
 	if (form) {
@@ -118,5 +117,3 @@ window.addEventListener('DOMContentLoaded', function () {
 		tabs[i].setAttribute('data-index', i);
 		tabHandler();
 	}
-
-});
